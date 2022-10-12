@@ -4,7 +4,9 @@
     <form id="skills" class="d-flex flex-start bg-transparent p-2 w-100 me-5" (ngSubmit)="addSkill($event)"
           [formGroup]="formGroup">
       <button *ngFor="let skill of skills" type="button" (click)="selectLabel(skill)" [style]="skill.style"
-              class="btn text-white p-2 ml-2 me-2">{{skill.label}}</button>
+              class="btn text-white p-2 ml-2 me-2">
+        {{skill.label}}
+      </button>
       <input type="text" class="form-control w-25" formControlName="skill">
     </form>
   </div>
